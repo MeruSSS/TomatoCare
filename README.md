@@ -71,13 +71,13 @@ git clone github.com/zen256/TomatoCare
 | Вирус мозаики томата | вирусная |
 | Здоровый лист | — |
 
-Технические названия классов и их порядок описаны в [`docs/dataset.md`](docs/dataset.md).
+Технические названия классов и их порядок описаны в [`docs/models/tomato/dataset.md`](docs/models/tomato/dataset.md).
 
 ## Датасет
 
 22 524 фотографии листьев томата в 10 классах, разделённые на обучающую, валидационную и тестовую выборки (15 762 / 3 373 / 3 389). Источник: https://www.kaggle.com/datasets/ashishmotwani/tomato. Сами изображения в репозиторий не входят.
 
-Состав классов, подготовка данных и известные особенности набора — в [`docs/dataset.md`](docs/dataset.md).
+Состав классов, подготовка данных и известные особенности набора — в [`docs/models/tomato/dataset.md`](docs/models/tomato/dataset.md).
 
 ## Модель и качество
 
@@ -91,7 +91,7 @@ git clone github.com/zen256/TomatoCare
 
 Цифры получены на снимках из того же набора, что и обучение. На реальных фото с другим фоном, освещением и камерой точность может быть ниже.
 
-Подробности — в [`docs/model.md`](docs/model.md).
+Подробности — в [`docs/models/tomato/model.md`](docs/models/tomato/model.md).
 
 ### Переобучение модели
 
