@@ -119,6 +119,5 @@ python ml/export_onnx.py   # экспорт в ONNX одним файлом
 ## Документация
 
 - [Пользовательский сценарий](docs/user_scenario.md)
-- [Датасет](docs/dataset.md)
-- [Модель](docs/model.md)
+- [Модели](docs/models)
 - [Отчёты о разработке](docs/reports/)
