@@ -1,23 +1,3 @@
-"""Сборка датасета кукурузы из одного или нескольких источников.
-
-Что делает:
-  1. Читает исходные папки вида <источник>/<класс>/*.jpg
-  2. Приводит названия классов к единым через --map (например "Blight=Northern_Leaf_Blight")
-  3. Ищет дубликаты МЕЖДУ ВСЕМИ источниками и классами:
-       - точные (MD5 файла)
-       - почти точные (dHash картинки, расстояние Хэмминга <= --near)
-     Из каждой группы дубликатов остаётся один файл. Если дубликаты лежат в
-     РАЗНЫХ классах - группа удаляется целиком (метка ненадёжна).
-  4. Делит оставшееся на train/valid/test (стратифицированно, фиксированный seed)
-     ПОСЛЕ удаления дубликатов - значит копии одного кадра не попадут в разные выборки.
-  5. Пишет dataset/{train,valid,test}/<класс>/ и dataset_stats.json
-
-Пример:
-  python prepare_dataset.py \
-      --src raw/plantvillage_corn raw/field_corn \
-      --map "Cercospora_leaf_spot Gray_leaf_spot=Gray_leaf_spot" "Corn_(maize)___healthy=healthy" \
-      --out dataset
-"""
 import argparse, hashlib, json, random, shutil, sys
 from collections import defaultdict
 from pathlib import Path
