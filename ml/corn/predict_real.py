@@ -1,8 +1,3 @@
-"""Проверка на РЕАЛЬНЫХ фото из интернета. Положите их в папку real_photos/ (можно
-в подпапки с именем класса - тогда посчитается и точность) и запустите:
-    python predict_real.py [--dir real_photos]
-Печатает top-3 для PyTorch и ONNX и пишет real_photos_results.md (таблица для отчёта).
-"""
 import argparse, json
 from pathlib import Path
 import numpy as np, onnxruntime as ort
