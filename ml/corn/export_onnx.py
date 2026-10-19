@@ -1,8 +1,3 @@
-"""Экспорт efficientnet_b0_best.pth -> efficientnet_b0.onnx (ОДИН файл, без .onnx.data)
-и проверка: ONNX Runtime против PyTorch на тестовых изображениях.
-
-Запуск из ml/corn/:  python export_onnx.py [--data dataset/test] [--n 200]
-"""
 import argparse, json, random
 from pathlib import Path
 
